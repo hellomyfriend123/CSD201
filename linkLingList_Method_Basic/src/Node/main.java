@@ -9,10 +9,17 @@ package Node;
  * @author DELL
  */
 public class main {
-    public static void main(String[] args) {
-        Node node = new Node(1);
-        Node node2 = new Node(2);
-        node.next = node2; // cách mà 2 node nối với nhau
-                           // muốn 2 node nối với nhau thì ta lấy đuôi đầu nối đầu kế 
+   public static void main(String[] args) {
+        Singlylinklist list = new Singlylinklist();
+        
+        list.addFirst(1);
+        list.addTail(2);
+        list.addTail(3);
+        list.addFirst(0);
+        list.addTail(4);
+        list.addTail(5);
+        list.PrintLit();
+        System.out.println("Size: " + list.getSize()); 
     }
 }
+
