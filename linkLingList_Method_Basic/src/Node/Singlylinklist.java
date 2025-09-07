@@ -22,7 +22,7 @@ public class Singlylinklist {
       newNode.next = head;
       head = newNode;
       }
-        size ++;
+      size ++;
     }
     
     public void addTail (int data){
@@ -32,24 +32,24 @@ public class Singlylinklist {
       }
       
       else {
-        Node curr = head;
-           curr = curr.next;
-           curr.next = newNode;
+           tail.next = newNode;
+           tail = newNode;
         }
-         size ++;
-    }
-
-    public void PrintList(){
-        Node curr = head;
-        while (curr!=null){
+      size ++;
+      }
+    
+    public void PrintLit() {
+     Node curr = head;
+     while (curr != null){
          System.out.println(curr.data + " ");
          curr = curr.next;
-        }
-         System.out.println();
-    }
+     }
+             System.out.println();
 
-    public int getSize (){
-        return size;
     }
-}
+    
+    public int getSize(){
+      return size;
+    }
+    }
 
