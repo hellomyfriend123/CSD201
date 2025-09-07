@@ -16,26 +16,40 @@ public class Singlylinklist {
     public void addFirst(int data){
       Node newNode = new Node(data);
       if (head == null){
-        head = newNode;
+        head = tail = newNode;
       }
       else {
       newNode.next = head;
       head = newNode;
       }
+        size ++;
     }
     
     public void addTail (int data){
       Node newNode = new Node(data);
       if (head == null){
-        head = newNode;
+        head = tail = newNode;
       }
       
       else {
         Node curr = head;
-        while (curr.next != null){
            curr = curr.next;
            curr.next = newNode;
         }
-      }
+         size ++;
+    }
+
+    public void PrintList(){
+        Node curr = head;
+        while (curr!=null){
+         System.out.println(curr.data + " ");
+         curr = curr.next;
+        }
+         System.out.println();
+    }
+
+    public int getSize (){
+        return size;
     }
 }
+
